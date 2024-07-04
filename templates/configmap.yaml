@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-api-test-config
+data:
+  apiVersions: |-
+    {{ .Capabilities.APIVersions | toYaml | nindent 4 }}
